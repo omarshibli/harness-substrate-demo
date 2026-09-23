@@ -8,3 +8,6 @@ test('sums price times quantity', () => {
 test('empty cart is zero', () => {
   assert.equal(total([]), 0)
 })
+test('applies a percentage discount', () => {
+  assert.equal(total([{ price: 100, qty: 1 }], 10), 90)
+})
